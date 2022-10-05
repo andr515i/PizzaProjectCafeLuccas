@@ -1,0 +1,15 @@
+﻿@page
+@model Pizza_Projektet___cafe_luccas.Models.SearchModel
+@{
+    ViewData["Title"] = "Search";
+}
+
+<!--Headline for Seachform-->
+<h1> Search </h1>
+<form method="post">
+
+    <input type="text" asp-for="Topping" placeholder=" Topping" />
+    <input type="text" asp-for="Name" placeholder=" Name" />
+    <input type="text" asp-for="Spice" placeholder=" Spice" />
+    <button type="submit">Search</button>
+</form>

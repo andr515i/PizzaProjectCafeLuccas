@@ -3,8 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:55638",
-      "sslPort": 44383
+      "applicationUrl": "http://localhost:38833",
+      "sslPort": 44358
     }
   },
   "profiles": {
@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Pizza_Projektet___cafe_luccas": {
+    "PizzaTo": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

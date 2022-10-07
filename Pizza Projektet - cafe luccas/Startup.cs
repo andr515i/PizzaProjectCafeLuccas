@@ -28,7 +28,7 @@ namespace Pizza_Projektet___cafe_luccas
             services.AddRazorPages();
 
             services.AddDbContext<Pizza_Projektet___cafe_luccasContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("Pizza_Projektet___cafe_luccasContext")));
+                    options.UseSqlServer(Configuration.GetConnectionString("Context")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Pizza_Projektet___cafe_luccas.Pages.Forms
+namespace Pizza_Projektet___cafe_luccas.Forms
 {
     public class MenuModel : PageModel
     {

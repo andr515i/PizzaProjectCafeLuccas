@@ -20,7 +20,7 @@ namespace Pizza_Projektet___cafe_luccas.Migrations
                 .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Pizza_Projektet___cafe_luccas.Models.Pizza", b =>
+            modelBuilder.Entity(".Models.Pizza", b =>
                 {
                     b.Property<int>("PizzaID")
                         .ValueGeneratedOnAdd()

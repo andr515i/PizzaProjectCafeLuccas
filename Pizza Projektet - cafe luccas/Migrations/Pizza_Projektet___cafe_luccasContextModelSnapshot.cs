@@ -8,7 +8,7 @@ using Pizza_Projektet___cafe_luccas.Data;
 namespace Pizza_Projektet___cafe_luccas.Migrations
 {
     [DbContext(typeof(Pizza_Projektet___cafe_luccasContext))]
-    partial class Pizza_Projektet___cafe_luccasContextModelSnapshot : ModelSnapshot
+    partial class ContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -18,7 +18,7 @@ namespace Pizza_Projektet___cafe_luccas.Migrations
                 .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Pizza_Projektet___cafe_luccas.Models.Pizza", b =>
+            modelBuilder.Entity(".Models.Pizza", b =>
                 {
                     b.Property<int>("PizzaID")
                         .ValueGeneratedOnAdd()

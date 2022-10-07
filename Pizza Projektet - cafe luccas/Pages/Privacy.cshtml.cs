@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pizza_Projektet___cafe_luccas.Pages
+namespace PizzaTo.Pages
 {
     public class PrivacyModel : PageModel
     {

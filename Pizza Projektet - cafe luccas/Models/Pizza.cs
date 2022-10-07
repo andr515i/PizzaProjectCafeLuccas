@@ -3,6 +3,6 @@
     public class Pizza
     {
         public int PizzaID { get; set; }
-        public int PriceID { get; set; }
+        public int PriceID { get; set; } 
     }
 }

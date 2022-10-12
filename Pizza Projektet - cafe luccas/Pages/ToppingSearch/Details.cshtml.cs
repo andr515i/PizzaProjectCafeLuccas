@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Pizza_Projektet___cafe_luccas.Data;
 using Pizza_Projektet___cafe_luccas.Models;
 
-namespace Pages.ToppingSearch
+namespace Pizza_Projektet___cafe_luccas.Pages.ToppingSearch
 {
     public class DetailsModel : PageModel
     {

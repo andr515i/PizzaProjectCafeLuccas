@@ -9,8 +9,7 @@
 
 
 body {
-      background-color: #F7AD45 !important; 
- 
+    background-color: #F7AD45 !important;
 }
 
 .footer {
@@ -29,15 +28,15 @@ h1 {
     width: 100%;
 }
 
-  /*   Make the image responsive */
-   .imageone img {
+    /*   Make the image responsive */
+    .imageone img {
         width: 100%;
         height: auto;
-    } 
+    }
 
     /* Style the button and place it in the middle of the container/image */
     .imageone .btn {
-        position: absolute; 
+        position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -52,7 +51,7 @@ h1 {
     }
 
         .imageone .btn:hover {
-    opacity: 0.6;
+            opacity: 0.6;
         }
 
 /*LunchOffer Modal css*/
@@ -88,3 +87,5 @@ h1 {
 
 
 
+body {
+}

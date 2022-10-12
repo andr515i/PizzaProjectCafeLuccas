@@ -4,25 +4,31 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Pizza_Projektet___cafe_luccas</title>
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/custom.css" />
+    <link rel="stylesheet" href="~/css/cover.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class=" navbar-expand-sm navbar-toggleable-sm nav-custom nav  border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Pizza_Projektet___cafe_luccas</a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="nav-custom nav justify-content-center ">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link nav-custom" asp-area="" asp-page="/Index">Forside</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link nav-custom" asp-area="" asp-page="/qweqweuhqoiqweqwe">ordre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-custom" asp-area="" asp-page="/Index">Download Menu</a>
                         </li>
                     </ul>
                 </div>
@@ -34,6 +40,16 @@
             @RenderBody()
         </main>
     </div>
+
+    @section Scripts{
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".AddPopUp").click(function (e) {
+                    $('#LunchOffer').modal('show');
+                });
+            });
+        </script>
+    }
 
     <footer class="border-top footer text-muted">
         <div class="container">

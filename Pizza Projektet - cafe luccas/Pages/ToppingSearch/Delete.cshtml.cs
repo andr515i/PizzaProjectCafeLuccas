@@ -4,18 +4,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Pizza_Projektet___cafe_luccas.Data;
 using Pizza_Projektet___cafe_luccas.Models;
 
-namespace Pages
+namespace Pages.ToppingSearch
 {
-    public class EditModel : PageModel
+    public class DeleteModel : PageModel
     {
         private readonly Pizza_Projektet___cafe_luccas.Data.Pizza_Projektet___cafe_luccasContext _context;
 
-        public EditModel(Pizza_Projektet___cafe_luccas.Data.Pizza_Projektet___cafe_luccasContext context)
+        public DeleteModel(Pizza_Projektet___cafe_luccas.Data.Pizza_Projektet___cafe_luccasContext context)
         {
             _context = context;
         }
@@ -39,39 +38,22 @@ namespace Pages
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see https://aka.ms/RazorPagesCRUD.
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (!ModelState.IsValid)
+            if (id == null)
             {
-                return Page();
+                return NotFound();
             }
 
-            _context.Attach(PizzaMenu).State = EntityState.Modified;
+            PizzaMenu = await _context.PizzaMenu.FindAsync(id);
 
-            try
+            if (PizzaMenu != null)
             {
+                _context.PizzaMenu.Remove(PizzaMenu);
                 await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!PizzaMenuExists(PizzaMenu.PizzaID))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
             }
 
             return RedirectToPage("./Index");
-        }
-
-        private bool PizzaMenuExists(int id)
-        {
-            return _context.PizzaMenu.Any(e => e.PizzaID == id);
         }
     }
 }

@@ -1,0 +1,43 @@
+﻿@page
+@model Pizza_Projektet___cafe_luccas.Pages.Forms.Menu.IndexModel
+@{
+
+    <div class="AddPopUp">
+        @Html.Label("Frokost")
+    </div>
+    <div class="modal fade" id="LunchOffer" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <center>
+                        <h1>
+                            Frokosttilbud mellem 11 og 15. <br />
+                            20% på alle pizzaer
+                        </h1>
+                    </center>
+
+                    <center><a href="asp-area=" " asp-page="/Forms/Menu" class="btn">Se menukort</a></center>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @section Scripts{
+        <script type="text/javascript">
+        $(document).ready(function () {
+            $(".AddPopUp").click(function (e) {
+                $('#LunchOffer').modal('show');
+            });
+        });
+        </script>
+    }
+
+
+
+
+
+}

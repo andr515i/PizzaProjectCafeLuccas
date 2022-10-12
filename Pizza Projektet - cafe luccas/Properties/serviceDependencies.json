@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "mssql1": {
-      "type": "mssql",
-      "connectionId": "ConnectionStrings:Pizza_Projektet___cafe_luccasContext"
-    }
-  }
-}

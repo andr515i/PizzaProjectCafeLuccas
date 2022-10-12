@@ -18,6 +18,8 @@ namespace Pizza_Projektet___cafe_luccas.Data
 
         public DbSet<Customers> Customers { get; set; }
 
+        public DbSet<Pizza_Projektet___cafe_luccas.Models.CustomerOrders> CustomerOrders { get; set; }
+
         
     }
 }

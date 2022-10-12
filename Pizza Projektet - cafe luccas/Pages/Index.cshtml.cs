@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Pizza_Projektet___cafe_luccas.Data;
 using Pizza_Projektet___cafe_luccas.Models;
 
-namespace Pizza_Projektet___cafe_luccas.Pages
+namespace Pages
 {
     public class IndexModel : PageModel
     {
@@ -19,11 +19,11 @@ namespace Pizza_Projektet___cafe_luccas.Pages
             _context = context;
         }
 
-        public IList<Pizza> Pizza { get;set; }  
+        public IList<PizzaMenu> PizzaMenu { get;set; }
 
         public async Task OnGetAsync()
         {
-            Pizza = await _context.Pizza.ToListAsync();
+            PizzaMenu = await _context.PizzaMenu.ToListAsync();
         }
     }
 }

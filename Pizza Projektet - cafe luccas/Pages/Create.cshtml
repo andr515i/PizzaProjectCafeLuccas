@@ -1,6 +1,5 @@
 ﻿@page
-@using Pizza_Projektet___cafe_luccas.Pages
-@model CreateModel
+@model Pages.CreateModel
 
 @{
     ViewData["Title"] = "Create";
@@ -8,16 +7,21 @@
 
 <h1>Create</h1>
 
-<h4>Pizza</h4>
+<h4>PizzaMenu</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Pizza.PriceID" class="control-label"></label>
-                <input asp-for="Pizza.PriceID" class="form-control" />
-                <span asp-validation-for="Pizza.PriceID" class="text-danger"></span>
+                <label asp-for="PizzaMenu.PizzaName" class="control-label"></label>
+                <input asp-for="PizzaMenu.PizzaName" class="form-control" />
+                <span asp-validation-for="PizzaMenu.PizzaName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PizzaMenu.Toppings" class="control-label"></label>
+                <input asp-for="PizzaMenu.Toppings" class="form-control" />
+                <span asp-validation-for="PizzaMenu.Toppings" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

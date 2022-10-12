@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Pizza_Projektet___cafe_luccas.Data;
 using Pizza_Projektet___cafe_luccas.Models;
 
-namespace Pizza_Projektet___cafe_luccas.Pages
+namespace Pages
 {
     public class DetailsModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace Pizza_Projektet___cafe_luccas.Pages
             _context = context;
         }
 
-        public Pizza Pizza { get; set; }
+        public PizzaMenu PizzaMenu { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,9 +28,9 @@ namespace Pizza_Projektet___cafe_luccas.Pages
                 return NotFound();
             }
 
-            Pizza = await _context.Pizza.FirstOrDefaultAsync(m => m.PizzaID == id);
+            PizzaMenu = await _context.PizzaMenu.FirstOrDefaultAsync(m => m.PizzaID == id);
 
-            if (Pizza == null)
+            if (PizzaMenu == null)
             {
                 return NotFound();
             }

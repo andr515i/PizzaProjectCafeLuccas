@@ -1,10 +1,14 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Pizza_Projektet___cafe_luccas.Data;
 using Pizza_Projektet___cafe_luccas.Models;
 
-namespace Pizza_Projektet___cafe_luccas.Pages
+namespace Pages
 {
     public class CreateModel : PageModel
     {
@@ -21,7 +25,7 @@ namespace Pizza_Projektet___cafe_luccas.Pages
         }
 
         [BindProperty]
-        public Pizza Pizza { get; set; }
+        public PizzaMenu PizzaMenu { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
@@ -31,7 +35,7 @@ namespace Pizza_Projektet___cafe_luccas.Pages
                 return Page();
             }
 
-            _context.Pizza.Add(Pizza);
+            _context.PizzaMenu.Add(PizzaMenu);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

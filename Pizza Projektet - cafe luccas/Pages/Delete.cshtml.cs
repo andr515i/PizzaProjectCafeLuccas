@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Pizza_Projektet___cafe_luccas.Data;
 using Pizza_Projektet___cafe_luccas.Models;
 
-namespace Pizza_Projektet___cafe_luccas.Pages
+namespace Pages
 {
     public class DeleteModel : PageModel
     {
@@ -20,7 +20,7 @@ namespace Pizza_Projektet___cafe_luccas.Pages
         }
 
         [BindProperty]
-        public Pizza Pizza { get; set; }
+        public PizzaMenu PizzaMenu { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,9 +29,9 @@ namespace Pizza_Projektet___cafe_luccas.Pages
                 return NotFound();
             }
 
-            Pizza = await _context.Pizza.FirstOrDefaultAsync(m => m.PizzaID == id);
+            PizzaMenu = await _context.PizzaMenu.FirstOrDefaultAsync(m => m.PizzaID == id);
 
-            if (Pizza == null)
+            if (PizzaMenu == null)
             {
                 return NotFound();
             }
@@ -45,11 +45,11 @@ namespace Pizza_Projektet___cafe_luccas.Pages
                 return NotFound();
             }
 
-            Pizza = await _context.Pizza.FindAsync(id);
+            PizzaMenu = await _context.PizzaMenu.FindAsync(id);
 
-            if (Pizza != null)
+            if (PizzaMenu != null)
             {
-                _context.Pizza.Remove(Pizza);
+                _context.PizzaMenu.Remove(PizzaMenu);
                 await _context.SaveChangesAsync();
             }
 

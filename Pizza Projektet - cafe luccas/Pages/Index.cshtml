@@ -1,6 +1,5 @@
 ﻿@page
-@using Pizza_Projektet___cafe_luccas.Pages
-@model IndexModel
+@model Pages.IndexModel
 
 @{
     ViewData["Title"] = "Index";
@@ -15,16 +14,22 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Pizza[0].PriceID)
+                @Html.DisplayNameFor(model => model.PizzaMenu[0].PizzaName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PizzaMenu[0].Toppings)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Pizza) {
+@foreach (var item in Model.PizzaMenu) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.PriceID)
+                @Html.DisplayFor(modelItem => item.PizzaName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Toppings)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.PizzaID">Edit</a> |

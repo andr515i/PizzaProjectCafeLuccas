@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Pizza_Projektet___cafe_luccas.Data;
 
 namespace PizzaProjektetcafeluccas.Migrations
 {
     [DbContext(typeof(Pizza_Projektet___cafe_luccasContext))]
-    partial class Pizza_Projektet___cafe_luccasContextModelSnapshot : ModelSnapshot
+    [Migration("20221012100040_init5")]
+    partial class init5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

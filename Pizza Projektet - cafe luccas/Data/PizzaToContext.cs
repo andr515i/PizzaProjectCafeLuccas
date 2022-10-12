@@ -14,6 +14,10 @@ namespace Pizza_Projektet___cafe_luccas.Data
         {
         }
 
-        public DbSet<Pizza_Projektet___cafe_luccas.Models.Pizza> Pizza { get; set; }
+        public DbSet<PizzaMenu> PizzaMenu { get; set; }
+
+        public DbSet<Customers> Customers { get; set; }
+
+        
     }
 }

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Pizza_Projektet___cafe_luccas.Data;
 using Pizza_Projektet___cafe_luccas.Models;
 
-namespace Pizza_Projektet___cafe_luccas.Pages
+namespace Pages
 {
     public class EditModel : PageModel
     {
@@ -21,7 +21,7 @@ namespace Pizza_Projektet___cafe_luccas.Pages
         }
 
         [BindProperty]
-        public Pizza Pizza { get; set; }
+        public PizzaMenu PizzaMenu { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,9 +30,9 @@ namespace Pizza_Projektet___cafe_luccas.Pages
                 return NotFound();
             }
 
-            Pizza = await _context.Pizza.FirstOrDefaultAsync(m => m.PizzaID == id);
+            PizzaMenu = await _context.PizzaMenu.FirstOrDefaultAsync(m => m.PizzaID == id);
 
-            if (Pizza == null)
+            if (PizzaMenu == null)
             {
                 return NotFound();
             }
@@ -48,7 +48,7 @@ namespace Pizza_Projektet___cafe_luccas.Pages
                 return Page();
             }
 
-            _context.Attach(Pizza).State = EntityState.Modified;
+            _context.Attach(PizzaMenu).State = EntityState.Modified;
 
             try
             {
@@ -56,7 +56,7 @@ namespace Pizza_Projektet___cafe_luccas.Pages
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!PizzaExists(Pizza.PizzaID))
+                if (!PizzaMenuExists(PizzaMenu.PizzaID))
                 {
                     return NotFound();
                 }
@@ -69,9 +69,9 @@ namespace Pizza_Projektet___cafe_luccas.Pages
             return RedirectToPage("./Index");
         }
 
-        private bool PizzaExists(int id)
+        private bool PizzaMenuExists(int id)
         {
-            return _context.Pizza.Any(e => e.PizzaID == id);
+            return _context.PizzaMenu.Any(e => e.PizzaID == id);
         }
     }
 }

@@ -1,6 +1,5 @@
 ﻿@page
-@using Pizza_Projektet___cafe_luccas.Pages
-@model DeleteModel
+@model Pages.DeleteModel
 
 @{
     ViewData["Title"] = "Delete";
@@ -10,19 +9,25 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Pizza</h4>
+    <h4>PizzaMenu</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Pizza.PriceID)
+            @Html.DisplayNameFor(model => model.PizzaMenu.PizzaName)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Pizza.PriceID)
+            @Html.DisplayFor(model => model.PizzaMenu.PizzaName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PizzaMenu.Toppings)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PizzaMenu.Toppings)
         </dd>
     </dl>
     
     <form method="post">
-        <input type="hidden" asp-for="Pizza.PizzaID" />
+        <input type="hidden" asp-for="PizzaMenu.PizzaID" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-page="./Index">Back to List</a>
     </form>

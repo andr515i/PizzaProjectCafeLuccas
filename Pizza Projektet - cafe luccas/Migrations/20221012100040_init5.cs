@@ -2,6 +2,7 @@
 
 namespace PizzaProjektetcafeluccas.Migrations
 {
+    // the uncountable attempt at migrating... auto generated code based on models and properties in respective models.
     public partial class init5 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

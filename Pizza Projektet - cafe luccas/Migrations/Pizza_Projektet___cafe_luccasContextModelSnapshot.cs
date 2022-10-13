@@ -7,6 +7,7 @@ using Pizza_Projektet___cafe_luccas.Data;
 
 namespace PizzaProjektetcafeluccas.Migrations
 {
+    // this class / migration is practically just version control to us. all auto generated
     [DbContext(typeof(Pizza_Projektet___cafe_luccasContext))]
     partial class Pizza_Projektet___cafe_luccasContextModelSnapshot : ModelSnapshot
     {

@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="~/css/custom.css" />
     <link rel="stylesheet" href="~/css/cover.css" />
 </head>
+
+@*------------------------------------------ Navbar start --------------------------------------------*@
 <body>
     <header>
         <nav class=" navbar-expand-sm navbar-toggleable-sm nav-custom nav  border-bottom box-shadow mb-3">
@@ -40,23 +42,24 @@
             @RenderBody()
         </main>
     </div>
-
+    @*------------------------------------ navbar end --------------------------------------*@
+    @*Javascript logic to make modal box popup on click of element with id of addpopup*@
     @section Scripts{
         <script type="text/javascript">
             $(document).ready(function () {
-                $(".AddPopUp").click(function (e) {
+                $("#AddPopUp").click(function (e) {
                     $('#LunchOffer').modal('show');
                 });
             });
         </script>
     }
-
+    @*part of the footer *@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2022 - Pizza_Projektet___cafe_luccas - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
-
+    @*external javascript dependencies *@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

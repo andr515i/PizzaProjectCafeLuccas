@@ -7,6 +7,8 @@ namespace Pizza_Projektet___cafe_luccas.Models
 {
     public class Search
     {
+        //not used anymore, could potentially be used in future, so we leave it in the project.
+        // * Currently obsolete * Ignore!!!!
 
         //properties
         //properties for topping

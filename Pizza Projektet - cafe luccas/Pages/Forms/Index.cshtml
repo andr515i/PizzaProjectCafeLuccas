@@ -1,7 +1,7 @@
 ﻿@page
 @model Pizza_Projektet___cafe_luccas.Pages.Forms.IndexModel
 @{
-
+// this is the default webpage form, used to show the modalbox with lunch discounts
     <div id="AddPopUp">
            <label>Frokost Menu</label>
     </div>
@@ -15,17 +15,12 @@
                                 20% på alle pizzaer
                             </h1>
                         </center>
-
-
-
-
-
                     </div>
                 </div>
             </div>
     </div>
 
-
+    @*javascript logic to make modal box popup*@
     @section Scripts{
     <script type="text/javascript">
             $(document).ready(function () {

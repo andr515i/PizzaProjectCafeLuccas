@@ -13,12 +13,12 @@ namespace Pizza_Projektet___cafe_luccas.Data
             : base(options)
         {
         }
-
+        // this is the tables we "import" into the project. we cant access tables if we dont make an instance of something that is 99% the same... microsoft logic :D
         public DbSet<PizzaMenu> PizzaMenu { get; set; }
 
         public DbSet<Customers> Customers { get; set; }
 
-        public DbSet<Pizza_Projektet___cafe_luccas.Models.CustomerOrders> CustomerOrders { get; set; }
+        public DbSet<CustomerOrders> CustomerOrders { get; set; }
 
         
     }

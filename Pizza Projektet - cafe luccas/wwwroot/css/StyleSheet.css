@@ -1,0 +1,59 @@
+﻿footer {
+    background-color: #5F8D37 !important;
+}
+
+.nav-custom {
+    background-color: #5F8D37 !important;
+    color: #FFF1D7 !important;
+    color: #fff; /* IE8 proofing */
+    color: rgba(255,255,255,.75);
+    border-bottom: 2px solid transparent;
+}
+
+    .nav-custom > .active > a,
+    .nav-custom > .active > a:hover,
+    .nav-custom > .active > a:focus {
+        color: #fff !important;
+        border-bottom-color: #fff !important;
+    }
+
+.li {
+    color: #FFF1D7 !important;
+}
+
+
+
+
+body {
+    background-color: #FFF1D7;
+}
+
+.searchTopping {
+    padding: 2%;
+    background-color: #ffffff;
+}
+
+.result {
+    padding: 2%;
+    background-color: #ffffff;
+}
+
+.searchByType {
+    padding: 2%;
+    background-color: #ffffff;
+}
+
+.searchByName {
+    padding: 2%;
+    background-color: #ffffff;
+}
+
+.btn-search {
+    background-color: #5F8D37 !important;
+    color: #FFF1D7 !important;
+}
+
+.seachForPizza {
+    margin: 2px 4px !important;
+    background-color: #ffffff;
+}

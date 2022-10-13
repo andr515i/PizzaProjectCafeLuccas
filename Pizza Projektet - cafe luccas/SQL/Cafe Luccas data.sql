@@ -36,7 +36,7 @@ as
 select * from ToppingTypes
 select * from  Toppings
 select * from Pizza
-select * from PizzaTopping
+select * from Pizza_Projektet___cafe_luccaspping
 select * from Orders
 select * from Customers
 select * from CustomerOrders
@@ -48,4 +48,4 @@ exec GetData;
 
 
 -- drop all tables
-drop table PizzaTopping, Orders, Pizza, Toppings, ToppingTypes, Price, Customers
+drop table Pizza_Projektet___cafe_luccaspping, Orders, Pizza, Toppings, ToppingTypes, Price, Customers

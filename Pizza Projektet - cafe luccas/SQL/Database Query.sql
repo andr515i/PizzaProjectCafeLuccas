@@ -38,7 +38,7 @@ create table Pizza (
 	foreign key (PriceID) references Price(PriceID)
 );
 -- pizza with toppings
-create table PizzaTopping (
+create table Pizza_Projektet___cafe_luccaspping (
 	PizzaID int not null,
 	ToppingID int not null,
 	primary key (PizzaID, ToppingID),

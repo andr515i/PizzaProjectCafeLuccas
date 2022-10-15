@@ -1,17 +1,21 @@
-﻿@page
+﻿@* default page that we always go to. *@
+@page
+@* "the logic" behind the website. this is where our c# code lays and is being called *@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
 
+@* title and modal box popup toggle *@
 <div class="text-center">
-<h1 id="AddPopUp">se menu</h1>
+    <h1 id="AddPopUp">se menu</h1>
 </div>
 
-
+@* also modal box toggle *@
 <div class="AddPopUp" data-toggle="modal" Data-target="#LunchOffer">
     @Html.Label("Frokost")
 </div>
+@* modal box to show lunch discount *@
 <div class="modal fade" id="LunchOffer" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -23,7 +27,7 @@
                     </h1>
                 </center>
 
-               
+
 
 
 
@@ -32,7 +36,10 @@
     </div>
 </div>
 
-<Scripts>{
+
+@* the javascript that makes the modalbox popup *@
+<Scripts>
+    {
     <script type="text/javascript">
         $(document).ready(function () {
             $("#AddPopUp").click(function (e) {
